@@ -8,6 +8,7 @@ import {
 import { Center, GluestackUIProvider, Text } from "@gluestack-ui/themed";
 import { Loading } from "./components/Loading";
 import { SignIn } from "./screens/signIn";
+import { SignUp } from "./screens/signUp";
 export default function App() {
   const [fontsLoaded] = useFonts({
     Roboto_700Bold,
@@ -21,7 +22,7 @@ export default function App() {
         //     HomePage
         //   </Text>
         // </Center>
-        <SignIn/>
+        <SignUp/>
       ) : (
         <Loading />
       )}

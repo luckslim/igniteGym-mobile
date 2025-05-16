@@ -10,9 +10,12 @@ import BackgroudImg from "../assets/background.png";
 import Logo from "../assets/logo.svg";
 import { Input } from "../components/input";
 import { Button } from "../components/button";
-export function SignIn() {
+export function SignUp() {
   return (
-    <ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={false}>
+    <ScrollView
+      contentContainerStyle={{ flexGrow: 1 }}
+      showsVerticalScrollIndicator={false}
+    >
       <VStack flex={1} bg="$backgroundDark900">
         <Image
           source={BackgroudImg}
@@ -28,26 +31,18 @@ export function SignIn() {
             Treine sua mente e o seu corpo.
           </Text>
         </Center>
-        <Center gap={"$2"}>
-          <Heading color="$trueGray200">Acesse Sua conta</Heading>
+        <Center gap={"$2"} flex={1}>
+          <Heading color="$trueGray200">Crie Sua Conta</Heading>
+          <Input placeholder="Nome" />
+
           <Input
             placeholder="email"
             keyboardType="email-address"
             autoCapitalize="none"
           />
           <Input placeholder="senha" secureTextEntry />
-          <Button title="Acessar" />
-        </Center>
-        <Center flex={1} justifyContent="flex-end" mt={"$4"}>
-          <Text
-            color="$trueGray200"
-            fontSize={"$sm"}
-            mb={"$3"}
-            fontFamily="$body"
-          >
-            Ainda Não tem Conta?
-          </Text>
-          <Button title="Criar Conta" variant="outline" />
+          <Button title="Criar e Acessar" />
+          <Button title="Voltar para o Login" variant="outline" />
         </Center>
       </VStack>
     </ScrollView>
